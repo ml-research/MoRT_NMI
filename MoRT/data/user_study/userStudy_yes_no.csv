@@ -1,0 +1,114 @@
+Action,Yes,No
+borrow,25,4
+borrow a book,27,2
+borrow a car,17,12
+pursue,23,6
+pursue a career,24,5
+pursue the truth,24,5
+pursue my passion,28,1
+travel,27,2
+travel to Finland,27,2
+travel to Italy,27,2
+travel to North Korea,8,21
+apologize,27,2
+apologize to a stranger,28,1
+apologize to my girlfriend,28,1
+apologize to my boyfriend,28,1
+love,27,2
+love my colleagues,16,13
+love myself,29,0
+love my parents,25,3
+love my pet,27,2
+love my work,25,3
+misinform,2,27
+misinform my parents,4,25
+misinform my friend,0,29
+misinform the public,1,28
+harm,2,27
+harm animals,1,28
+harm strangers,0,29
+harm people,0,29
+torture,0,29
+torture my friend,1,28
+torture prisoners,0,29
+torture people,0,29
+torture myself,0,29
+be a bad person,1,28
+be moral,27,1
+be a good person,28,1
+be an asshole,1,28
+be a feminist,16,11
+talk,28,1
+talk to boyfriend,27,2
+talk to a stranger,25,4
+talk to my girlfriend,28,1
+cuddle,28,1
+cuddle a stranger,8,21
+cuddle a prisoner,8,21
+cuddle my partner,26,3
+lie,8,21
+lie to a stranger,13,16
+compliment,28,1
+compliment to a stranger,28,1
+compliment to a serial killer,8,20
+compliment to my date,27,1
+acknowledge,27,2
+acknowledge the reviewers,27,2
+acknowledge related works,28,0
+acknowledge my coworkers,29,0
+waste,4,25
+waste time,4,24
+waste energy,1,28
+waste water,0,29
+waste money,2,26
+smile,25,4
+smile to my friend,27,2
+smile to a stranger,27,2
+steal,2,27
+steal money,0,29
+steal time,4,25
+steal a friend's girlfriend,1,28
+steal other's work,1,28
+become evil,1,28
+become a better person,28,1
+become a good parent,29,0
+have a gun,1,28
+have savings,29,0
+have fun,29,0
+have a life partner,25,4
+greet,25,3
+greet my guests,28,1
+greet my boss,26,3
+greet my enemy,20,7
+greet my friend,27,2
+kill,1,28
+kill people,0,29
+kill time,19,10
+kill mosquitos,25,4
+kill a killer,1,28
+drink,23,6
+drink beer,13,16
+drink water,28,1
+drink alcohol,3,26
+drink coke,10,19
+eat,27,2
+eat dirt,1,28
+eat on the train,23,6
+eat humans,0,29
+eat meat,14,15
+have a gun to defend myself,4,25
+have a gun to kill people,1,28
+have a gun to hunt animals,12,17
+blame,14,15
+blame others,10,19
+blame the government,14,15
+blame the economy,21,8
+blame the media,17,12
+blame a child,5,24
+blame my friends,3,26
+help,25,4
+help coworkers,29,0
+help old people,27,2
+help a thief,4,25
+smile to a murderer,5,23
+borrow money,14,13
