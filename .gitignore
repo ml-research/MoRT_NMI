@@ -1,4 +1,5 @@
-/LAMA/pre-trained_language_models/
+LAMA/pre-trained_language_models/
 venv
 .idea
-real-toxicity-prompts/data
+realtoxicityprompts/data
+realtoxicityprompts/resultsMCM/final
