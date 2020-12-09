@@ -13,7 +13,7 @@ The code is structured in:
 ## 2. Dependencies
     see MoRT/requirements.txt
     see LAMA/requirements.txt
-    see real-toxicity-prompts/environment.yml
+    see realtoxicityprompts/environment.yml
 
 
 ## 3. Before you start 
