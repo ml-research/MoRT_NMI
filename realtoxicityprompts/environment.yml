@@ -1,0 +1,35 @@
+name: rtp
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+
+  - pip
+  - pip:
+      - click
+      - datasketch
+      - google-api-python-client
+      - nltk
+      - openai
+      - tensorboard
+      - tensorboardX
+      - spacy
+      - sqlalchemy
+      - tldextract
+      - tqdm
+      - transformers
+
+  - ipython
+  - numpy
+  - pandas
+  - scipy
+  - dask
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - pytest
+  - pytorch::pytorch
+  - pytorch::torchtext
+

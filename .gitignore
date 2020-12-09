@@ -3,3 +3,4 @@ venv
 .idea
 realtoxicityprompts/data
 realtoxicityprompts/resultsMCM/final
+*.ipynb_checkpoints

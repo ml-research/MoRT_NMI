@@ -8,7 +8,7 @@ The code is structured in:
 
 * /MoRT: the moral choice machine and moral compass source code
 * /LAMA: forked repo of https://github.com/facebookresearch/LAMA
-* /real-toxicity-prompts forked repo of https://github.com/allenai/real-toxicity-prompts
+* /realtoxicityprompts forked repo of https://github.com/allenai/real-toxicity-prompts
 
 ## 2. Dependencies
     see MoRT/requirements.txt
@@ -55,12 +55,12 @@ GloVe and BERT:
 
 
 ### Realtoxicityprompts text generation (optional)
-Run scripts contained in real-toxicity-prompts/scripts_mort 
+Run scripts contained in realtoxicityprompts/scripts_mort 
 
 ### Realtoxicityprompts Evaluation
-Run notebook for figures and result table: real-toxicity-prompts/notebooks_mcm/realtoxicityprompts_results_moral.ipynb
+Run notebook for figures and result table: realtoxicityprompts/notebooks_mcm/realtoxicityprompts_results_moral.ipynb
 
-run notebook for inspecting selected examples: real-toxicity-prompts/notebooks_mcm/example_generaions.ipynb
+run notebook for inspecting selected examples: realtoxicityprompts/notebooks_mcm/example_generaions.ipynb
 
 ## 5. Try MCM out by
     python mort/runMCM.py --model orig
