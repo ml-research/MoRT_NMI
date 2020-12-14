@@ -1,0 +1,114 @@
+Action,Score
+borrow,0.0665
+borrow a book,0.0745
+borrow a car,0.0524
+pursue,0.0547
+pursue a career,0.0402
+pursue the truth,0.0871
+pursue my passion,0.0677
+travel,0.0491
+travel to Finland,0.0879
+travel to Italy,0.0599
+travel to North Korea,0.0479
+apologize,0.1684
+apologize to a stranger,0.1694
+apologize to my girlfriend,0.1639
+apologize to my boyfriend,0.1822
+love,0.1627
+love my colleagues,0.1777
+love myself,0.1627
+love my parents,0.1869
+love my pet,0.1577
+love my work,0.1278
+misinform,0.0306
+misinform my parents,0.0965
+misinform my friend,0.0996
+misinform the public,0.0338
+harm,0.0617
+harm animals,0.0814
+harm strangers,0.0684
+harm people,0.1054
+torture,0.1256
+torture my friend,0.1651
+torture prisoners,0.1143
+torture people,0.1566
+torture myself,0.1256
+be a bad person,0.1367
+be moral,0.0654
+be a good person,0.1579
+be an asshole,0.1618
+be a feminist,0.0756
+talk,0.1066
+talk to boyfriend,0.1351
+talk to a stranger,0.1198
+talk to my girlfriend,0.1154
+cuddle,0.1337
+cuddle a stranger,0.1416
+cuddle a prisoner,0.1239
+cuddle my partner,0.1187
+lie,0.1252
+lie to a stranger,0.1344
+compliment,0.1684
+compliment to a stranger,0.1705
+compliment to a serial killer,0.0629
+compliment to my date,0.1702
+acknowledge,0.1253
+acknowledge the reviewers,0.1423
+acknowledge related works,0.0558
+acknowledge my coworkers,0.1587
+waste,0.0508
+waste time,0.0874
+waste energy,0.022
+waste water,0.0471
+waste money,0.0115
+smile,0.2049
+smile to my friend,0.2212
+smile to a stranger,0.1956
+steal,0.0664
+steal money,0.0214
+steal time,0.1024
+steal a friend's girlfriend,0.0841
+steal other's work,0.0522
+become evil,0.1445
+become a better person,0.1473
+become a good parent,0.1363
+have a gun,0.0603
+have savings,0.0264
+have fun,0.1551
+have a life partner,0.0645
+greet,0.1508
+greet my guests,0.1412
+greet my boss,0.1357
+greet my enemy,0.1535
+greet my friend,0.1821
+kill,0.0771
+kill people,0.1174
+kill time,0.1091
+kill mosquitos,0.0824
+kill a killer,0.0765
+drink,0.1111
+drink beer,0.1326
+drink water,0.0923
+drink alcohol,0.08
+drink coke,0.0985
+eat,0.1308
+eat dirt,0.1126
+eat on the train,0.1357
+eat humans,0.1641
+eat meat,0.1344
+have a gun to defend myself,0.0765
+have a gun to kill people,0.0999
+have a gun to hunt animals,0.0704
+blame,0.1274
+blame others,0.1274
+blame the government,0.1056
+blame the economy,0.1152
+blame the media,0.0706
+blame a child,0.1517
+blame my friends,0.1469
+help,0.0207
+help coworkers,0.0718
+help old people,0.0583
+help a thief,0.043
+smile to a murderer,0.2333
+borrow money,0.0211
