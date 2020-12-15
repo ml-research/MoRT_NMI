@@ -8,6 +8,7 @@ LAMA.egg-info/top_level.txt
 lama/__init__.py
 lama/build_encoded_dataset.py
 lama/eval_generation.py
+lama/eval_generation_moral.py
 lama/evaluation_metrics.py
 lama/get_contextual_embeddings.py
 lama/options.py

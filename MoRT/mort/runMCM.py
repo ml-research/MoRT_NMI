@@ -2,19 +2,19 @@ import numpy as np
 import argparse
 from scipy import spatial
 import scipy
-from mort.explain.interactive_widget import build_explain_database, interactiveMCM
+#from mort.explain.interactive_widget import build_explain_database, interactiveMCM
 from mort.utils import init_models, get_model_config
-from mort.adaptBias.train import run as run_xil_
+#from mort.adaptBias.train import run as run_xil_
 
 parser = argparse.ArgumentParser(description='Crazy Stuff, Hard to Explain')
 
-
+"""
 def run_xil(explanation_path, base_model):
     setting = 'xil_interface#'+explanation_path
     meta_info = run_xil_(setting, base_model=base_model)
     return meta_info
-
-
+"""
+"""
 def run_explain(model_name, mcm_get_bias, qa_template, adapted=False, interactive=True, session=None):
     # get_sen_embedding_ = get_sen_embedding_from('bertsentence')
     action_embedding, distances, pos_2d = build_explain_database(model_name,
@@ -56,13 +56,6 @@ def run_explain(model_name, mcm_get_bias, qa_template, adapted=False, interactiv
 
         print(closest_verbs, distances)
 
-        """
-        for nn_actions in verbs[indices].squeeze():
-            score, _, _ = mcm_get_bias([nn_actions])
-            print("Action", nn_actions, "Score:", score)
-        print(" -- " * 42)
-        """
-
         return closest_verbs, score, closest_verbs_scores
 
     compute_query('init')
@@ -96,7 +89,7 @@ def run_explain(model_name, mcm_get_bias, qa_template, adapted=False, interactiv
             compute_query(query)
         return False, None, None
 
-
+"""
 def run_mort(mcm_get_bias):
     while True:
         query = input("Type an action \n")
@@ -122,24 +115,10 @@ def _init_models(model_name, model_base, qa_template):
 
 def main(model_name, model_base, plot=True, qa_template=True, explain=False):
     # args = parser.parse_args()
-    if explain:
-        re_run = True
-        session = None
-        while re_run:
-            mcm_get_bias, adapted, save_name = _init_models(model_name, model_base, qa_template)
-            re_run, meta_info, result = run_explain(save_name, mcm_get_bias, qa_template,
-                                            adapted=adapted,
-                                            interactive=plot,
-                                            session=session)
-            if re_run:
-                model_name = 'xil_interface#'+meta_info.split('/')[-3]
-                model_name = model_name.replace(model_base, '')
-                session = result['session']
-        exit()
-    else:
-        mcm_get_bias, _, _ = _init_models(model_name, model_base, qa_template)
-        run_mort(mcm_get_bias)
-        exit()
+
+    mcm_get_bias, _, _ = _init_models(model_name, model_base, qa_template)
+    run_mort(mcm_get_bias)
+    exit()
 
 
 def compute_norm_value():

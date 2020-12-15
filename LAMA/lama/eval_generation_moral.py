@@ -108,7 +108,7 @@ def main(args):
 
     print(data_user_study_BERTKnowledge)
 
-    pickle.dump(data_user_study_BERTKnowledge, open('./results/parsed_BERTKnowledge_tests.p',
+    pickle.dump(data_user_study_BERTKnowledge, open('./parsed_BERTKnowledge_tests.p',
                                       'wb'))
 
 

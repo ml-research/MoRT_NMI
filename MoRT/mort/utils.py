@@ -1,6 +1,6 @@
 import torch
 from sklearn.decomposition import PCA
-from mort.funcs_mcm import get_sen_embedding_from, BERTSentenceSubspace, MoRTSentenceSubspace, BERTSentence, pytorch_pca_transform
+from mort.funcs_mcm import get_sen_embedding_from, BERTSentenceSubspace, BERTSentence, pytorch_pca_transform
 
 
 def compute_PCA(n_components, x):
@@ -66,23 +66,7 @@ def init_models(transormer_model, qa_template, eval_model_path, adapted=False, w
     print("Start init MCM model")
     if adapted:
         # 7.9742536544799805 for rec
-        norm = None
-        if 'bert-large-nli-mean-tokens_rec/bert_model/autoencoder.pt' in eval_model_path: # TODO redo retrain so it's included in meta data or set meta data
-            norm = 7.9742536544799805
-        model_mcm = MoRTSentenceSubspace(device=device,
-                                         transormer_model=transormer_model,
-                                         filename_pickled_cluster=filename_pickled_cluster,
-                                         pca_framework=pca_framework,
-                                         eval_model_path=eval_model_path,
-                                         working_path=working_path,
-                                         norm=norm
-                                         #norm=13.490541458129883,  # only for bert_model_adapted_run1
-                                         )
-
-        def bias(query, batch_size=10, show_progress_bar=False):
-            return model_mcm.bias(query, norm=model_mcm.norm, qa_template=qa_template,
-                                  batch_size=batch_size,
-                                  show_progress_bar=show_progress_bar)
+        raise ValueError("not included in this version")
     else:
         if subspace:
             if 'SemBERT_STSB' in transormer_model:
