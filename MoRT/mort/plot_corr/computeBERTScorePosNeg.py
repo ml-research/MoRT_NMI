@@ -2,6 +2,7 @@ from mort.funcs_mcm import BERTSentence, BERTSentenceSubspace
 from tqdm import tqdm
 import csv
 from mort.dataMoral import dos_50, donts_50
+import os
 
 actions_keys_dos = list([d[0] for d in dos_50])
 actions_keys_donts = list([d[0] for d in donts_50])
@@ -18,7 +19,8 @@ def compute_bias(bias_func, name, actions, actions_keys):
 
     #csv_columns = ['Action', 'Score']
 
-    csv_file = "data/correlation/pos_neg/BERT_{}_bias.csv".format(name)
+    csv_file = "./data_/correlation/pos_neg/BERT_{}_bias.csv".format(name)
+    os.makedirs(os.path.dirname(csv_file), exist_ok=True)
     try:
         with open(csv_file, 'w') as csvfile:
             writer = csv.writer(csvfile)
@@ -33,14 +35,6 @@ def compute_bias(bias_func, name, actions, actions_keys):
     except IOError:
         print("I/O error")
 
-
-emb = BERTSentence(transormer_model='bert-large-nli-stsb-mean-tokens')
-actions_ = actions_keys_dos.copy()
-compute_bias(lambda x: emb.bias(x), 'stsb_dos_cossim', actions_, actions_)
-actions_ = actions_keys_donts.copy()
-compute_bias(lambda x: emb.bias(x), 'stsb_donts_cossim', actions_, actions_)
-del emb
-exit()
 
 emb = BERTSentence()
 actions_ = actions_keys_dos.copy()

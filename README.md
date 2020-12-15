@@ -52,7 +52,7 @@ GloVe and BERT:
 
     python mort/plot_corr/computeBERTScorePosNeg.py
     python mort/plot_corr/computeGloveScorePosNeg.py
-    python mort/plot_corr/computeBERTAndGloVeScoreOfUserStudyActions.py.py
+    python mort/plot_corr/computeBERTAndGloVeScoreOfUserStudyActions.py
 
 
 

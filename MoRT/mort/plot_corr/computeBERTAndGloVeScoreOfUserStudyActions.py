@@ -1,6 +1,7 @@
 from mort.funcs_mcm import BERTSentence, BERTSentenceSubspace
 from tqdm import tqdm
 import csv
+import os
 
 with open("./data/user_study/userStudy_yes_no.csv", "r") as f:
     actions_keys_ = [row.split(',')[0] for row in f]
@@ -23,7 +24,8 @@ def compute_bias(bias_func, name, actions, actions_keys):
 
     csv_columns = ['Action', 'Score']
 
-    csv_file = "./data/correlation/userstudy/{}_bias.csv".format(name)
+    csv_file = "./data_/correlation/userstudy/{}_bias.csv".format(name)
+    os.makedirs(os.path.dirname(csv_file), exist_ok=True)
     try:
         with open(csv_file, 'w') as csvfile:
             writer = csv.writer(csvfile)
@@ -43,14 +45,12 @@ emb = BERTSentence(transormer_model='average_word_embeddings_glove.840B.300d')
 actions_ = actions_keys_.copy()
 compute_bias(lambda x: emb.bias(x), 'glove_cossim', actions_, actions_)
 del emb
-exit()
 
 
 emb = BERTSentence()
 actions_ = actions_keys_.copy()
 compute_bias(lambda x: emb.bias(x), 'BERT_cossim', actions_, actions_)
 del emb
-exit()
 
 emb_sub = BERTSentenceSubspace()
 norm = 8.946814

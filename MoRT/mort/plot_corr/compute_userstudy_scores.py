@@ -1,8 +1,8 @@
-import numpy as np
 import csv
+import os
 
 fname = "./data/user_study/userStudy_yes_no.csv"
-fname_out = "./data/correlation/userStudy_scores.csv"
+fname_out = "./data_/correlation/userStudy_scores.csv"
 sentences_ = list()
 
 actions = list()
@@ -19,6 +19,7 @@ with open(fname, "r") as f:
         bias_dict[vect[0]] = acc
 
 csv_columns = ['Action', 'Score']
+os.makedirs(os.path.dirname(fname_out), exist_ok=True)
 with open(fname_out, 'w') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(csv_columns)

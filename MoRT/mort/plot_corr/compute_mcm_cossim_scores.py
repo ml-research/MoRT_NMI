@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     res.sort(key=lambda x: x[0])
     # save data to file
-    filename = 'mort/plt_Corr/results/bias/{}Verbs_{}Embedding{}{}.csv'.format(args.data,
+    filename = 'data_/correlation/{}Verbs_{}Embedding{}{}.csv'.format(args.data,
                                                                              args.model,
                                                                              "_single" if args.single_question else "",
                                                                              "_paper_plot" if args.paper_plot else "")
