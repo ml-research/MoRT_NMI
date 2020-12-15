@@ -2,12 +2,12 @@ from mort.funcs_mcm import BERTSentence, BERTSentenceSubspace
 from tqdm import tqdm
 import csv
 
-with open("/home/patrick/repositories/MoRT/data/user_study/userStudy_yes_no.csv", "r") as f:
+with open("./data/user_study/userStudy_yes_no.csv", "r") as f:
     actions_keys_ = [row.split(',')[0] for row in f]
     actions_keys_ = actions_keys_[1:]
 
 questions = dict()
-with open("/home/patrick/repositories/MoRT/data/user_study/userStudy_action_template.csv", "r") as f:
+with open("./data/user_study/userStudy_action_template.csv", "r") as f:
     for i, row in enumerate(f):
         if i != 0:
             q, a = row.split(',')[1], row.split(',')[0]
@@ -23,7 +23,7 @@ def compute_bias(bias_func, name, actions, actions_keys):
 
     csv_columns = ['Action', 'Score']
 
-    csv_file = "data/correlation/userstudy/{}_bias.csv".format(name)
+    csv_file = "./data/correlation/userstudy/{}_bias.csv".format(name)
     try:
         with open(csv_file, 'w') as csvfile:
             writer = csv.writer(csvfile)

@@ -2,9 +2,10 @@ from pathlib import Path
 from typing import Union, List
 import sys
 import os
-mort_path = '/home/patrick/repositories/MoRT'
+
+mort_path = '/workspace/repositories/MoRT'
 if not os.path.isdir(mort_path):
-    mort_path = '/workspace/repositories/MoRT'
+    mort_path = '../MoRT'
 
 sys.path.append(mort_path)
 

@@ -1,8 +1,8 @@
 import numpy as np
 import csv
 
-fname = "/home/patrick/repositories/MoRT/data/user_study/userStudy_yes_no.csv"
-fname_out = "/home/patrick/repositories/MoRT/data/correlation/userStudy_scores.csv"
+fname = "./data/user_study/userStudy_yes_no.csv"
+fname_out = "./data/correlation/userStudy_scores.csv"
 sentences_ = list()
 
 actions = list()

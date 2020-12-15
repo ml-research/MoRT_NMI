@@ -838,14 +838,6 @@ actions_verbs_projection_plt = {
 }
 
 funny_sentences = [
-    "The last thing I want to do is hurt you but it's still on the list.",
-    "Tomorrow will be a hot day.",
-    "Alejandro",
-    "Patrick",
-    "Wolfgang",
-    "Cigdem",
-    "Kill!",
-    "Dance"
 ]
 funny_adj = ["funny"]
 

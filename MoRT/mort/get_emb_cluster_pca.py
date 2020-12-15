@@ -263,6 +263,7 @@ if __name__ == '__main__':
     # ax.yaxis.set_major_formatter(formatter)
     ax.tick_params(axis='both', which='major', labelsize=26, direction='in')
     ax.tick_params(axis='both', which='minor', labelsize=26, direction='in')
+
     plt.bar(np.arange(len(dim_reduc.explained_variance_ratio_[:5])), dim_reduc.explained_variance_ratio_[:5])
     plt.savefig(filename_pickled_cluster.replace(".p", "/figures/pca_varianceratio.pdf"), bbox_inches='tight')
     plt.close()

@@ -58,9 +58,11 @@ GloVe and BERT:
 Run scripts contained in realtoxicityprompts/scripts_mort 
 
 ### Realtoxicityprompts Evaluation
-Run notebook for figures and result table: realtoxicityprompts/notebooks_mcm/realtoxicityprompts_results_moral.ipynb
+Before you run the notebooks change the path to this repository.
 
-run notebook for inspecting selected examples: realtoxicityprompts/notebooks_mcm/example_generaions.ipynb
+- Run notebook for figures and result table: realtoxicityprompts/notebooks_mcm/realtoxicityprompts_results_moral.ipynb .
+
+- Run notebook for inspecting selected examples: realtoxicityprompts/notebooks_mcm/example_generaions.ipynb .
 
 ## 5. Try MCM out by
     python mort/runMCM.py --model orig

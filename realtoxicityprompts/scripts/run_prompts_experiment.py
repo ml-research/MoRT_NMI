@@ -15,11 +15,6 @@ from utils.utils import load_jsonl, batchify
 import sys
 import os
 
-rtpt_path = '/home/patrick/repositories/rtpt'
-if not os.path.isdir(rtpt_path):
-    rtpt_path = '/workspace/repositories/rtpt'
-sys.path.append(rtpt_path)
-from rtpt import RTPT
 
 ALLOWED_MODELS = ['gpt3', 'gpt2', 'gpt2-affect', 'gpt2-ctrl', 'gpt2-greedy', 'gpt2-naughty-list',
                   'pplm', 'ctrl', 'openai-gpt', 'xlnet',
@@ -220,12 +215,12 @@ def main(output_dir: str, dataset_file: Optional[str], use_eos: bool, model: str
 
     # Generate and collate perspective scores
     generations = []
-    rtpt = RTPT('PS', 'MCM_GPT2', max_iterations=len(prompts))
-    rtpt.start()
+
+
     for i, gen in enumerate(generations_iter):
         generations.append(gen)
         perspective(f'generation-{i}', gen)
-        rtpt.step()
+
 
     torch.cuda.empty_cache()
     perspective.stop()
