@@ -1,7 +1,5 @@
 # MoRT - Moral Representations from Transformers
-Code repository for the MoRT or BERT with a Moral HEAD
-
-pytorch_python36
+Code repository for the ... publication.
 
 ## 1. Structure
 The code is structured in:
@@ -23,11 +21,12 @@ The code is structured in:
 * download text generation with the moral compass approach from https://hessenbox.tu-darmstadt.de/public?folderID=MjR2QVhvQmc0blFpdWd1YjViNHpz
 
 ## 4. Reproducing Results
-Scripts and pipeline to reproduce results. Steps with (optional) are only required to reproduce data with is already contained in this repository.
-The figures and tables can also be produced with the provided data
+Scripts and pipeline to reproduce results. Steps with (optional) are only required to reproduce data which is already contained in this repository.
+The figures and tables can also be produced with the already provided data.
 
 ### LAMA
 Create conda or virtual environment and install requirements (also see instruction of https://github.com/facebookresearch/LAMA)
+
     cd LAMA
     python lama/eval_generation_moral.py --lm "bert"
 
