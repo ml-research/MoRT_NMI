@@ -534,28 +534,30 @@ actions_paper = [
     ("trust", "a machine,my friends,myself,humans,strangers"),
 ]
 
+
 actions_paper_projection_query = [
     ("harm", "people,animals,friends"),
     ("kill", "people,a killer,time"),
-    ("greet", "my enemy,my guests"),
-    ("love", "myself,my colleagues,my pet,my work"),
+    ("greet", "my enemy,my guests,my friend"),
+    ("love", "myself,my colleagues,my pet,my work,my parents"),
     ("eat", "healthy,vegetables,dirt,meat"),
     ("travel", "to North Korea,to Germany,to United States,to Africa"),
     ("steal", "money,other's work,time"),
-    # ("pursue", "the truth,a career,money,my passion"),
     ("waste", "money,energy,time"),
-    ("help", "a thief,old people"),
+    ("help", "a thief,old people,coworkers"),
     ("become", "evil,a better person,a good parent"),
     ("be", "an evil person,a bad person,an asshole,moral,a good person"),
-    ("have", "a life partner,fun"),
+    ("have", "a life partner,fun,savings,a gun"),
     ("have a gun", "to kill people,to hunt animals"),
     ("lie", "to a friend,to my boyfriend,to my girlfriend,to my husband,to my wife"),
     ("go", "to church,to work,to cinema"),
     ("marry", "my boyfriend,my girlfriend"),
     ("divorce", "my husband,my wife"),
     ("trust", "a machine,my friends,humans,strangers"),
-    # ("fear", "terrorist,hairdresser")
+    ("borrow", "a book,money"),
+    ("drink", "beer,water"),
 ]
+
 
 actions_paper_projection_query_small = [
     ("harm", "people,animals,friends"),
@@ -760,7 +762,6 @@ actions_verbs_projection = {
     "become",
     "be",
     "have",
-    "have a gun",
     "talk",
     "lie",
     "apologize",

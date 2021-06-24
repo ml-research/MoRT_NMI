@@ -203,19 +203,30 @@ if __name__ == '__main__':
 
     # Y = tsne.fit_transform(corpus_embeddings[0])
     # Y = res
+    ensure_dir(filename_pickled_cluster.replace(".p", "/figures/moral_projection.pdf"))
+    norm = 8.946814
     fig, ax = plt.subplots(figsize=(20, 12))
     texts = []
+    Y[:, 0] = -Y[:, 0] / norm
     plt.scatter(Y[:, 0], Y[:, 1], c=[colors_a[0] if t <= 0 else colors_a[1] for t in Y[:, 0]])
     #ax.xaxis.set_major_formatter(NullFormatter())
     #ax.yaxis.set_major_formatter(NullFormatter())
-    plt.ylabel("2. PC", fontsize=26)
-    plt.xlabel("1. PC", fontsize=26)
+    #plt.ylabel("2. PC", fontsize=26)
+    #plt.xlabel("1. PC", fontsize=26)
 
     plt.axis('tight')
+    csv_file = open(filename_pickled_cluster.replace(".p", "/figures/moral_projection.csv"), 'w')
     for i, txt in enumerate(corpus_embeddings[1]):
         texts.append(ax.text(Y[i][0], Y[i][1], txt, fontSize="26"))
+        csv_file.write(str(Y[i][0]) + "," + txt + '\n')
+    csv_file.close()
     fig.patch.set_visible(False)
-    ax.axis('off')
+    #ax.axis('off')
+    ax.set_xlim((-1.1, 1.1))
+    ax.tick_params(axis='x', which='major', labelsize=24)
+    ax.tick_params(axis='x', which='minor', labelsize=18)
+    ax.get_yaxis().set_visible(False)
+    plt.xlabel("Moral score", fontsize=26)
     ax.axvline(x=0, linewidth=2, color='r', ls="--", alpha=0.6)
     ax.axhline(y=0, linewidth=2, color='r', ls="--", alpha=0.6, xmin=0.01, xmax=0.99)
     y_x = Y[:, 0]
@@ -224,13 +235,12 @@ if __name__ == '__main__':
     y_max = np.max(Y[:, 1])
     #plt.scatter([x_max + 0.7], [0], marker=">", color='r', alpha=0.6, s=80)
     #plt.scatter([x_min - 0.1], [0], marker="<", color='r', alpha=0.6, s=80)
-    texts.append(ax.text(4., -1., "\\textbf{BERT's moral dimension}", fontSize="26", color='r', alpha=0.6))
-    ax.annotate("\\textbf{Don'ts}", (x_max, y_max), fontSize="26")
-    ax.annotate("\\textbf{Dos}", (x_min, y_max), fontSize="26")
+    texts.append(ax.text(4., -1., "\\textbf{BERT's moral direction}", fontSize="26", color='r', alpha=0.6))
+    ax.annotate("\\textbf{Dos}", (x_max, y_max), fontSize="26")
+    ax.annotate("\\textbf{Don'ts}", (x_min, y_max), fontSize="26")
     #ax.tick_params(axis='both', which='major', labelsize=26, direction='in')
     #ax.tick_params(axis='both', which='minor', labelsize=26, direction='in')
     adjust_text(texts, only_move={'points': 'y', 'text': 'y', 'objects': 'xy'}, lim=500)
-    ensure_dir(filename_pickled_cluster.replace(".p", "/figures/moral_projection.pdf"))
     plt.savefig(filename_pickled_cluster.replace(".p", "/figures/moral_projection.svg"), bbox_inches='tight')
     plt.close()
     plt.clf()
@@ -286,6 +296,8 @@ if __name__ == '__main__':
     #1 / 0
 
     res = list()
+    csv_file = open(filename_pickled_cluster.replace(".p", "/figures/moral_projection_query.csv"), 'w')
+
     for test_action in tqdm(test_actions):
         test_questions = [q[0].format(test_action) for q in experimental_quests_paper]
         test = get_sen_embedding_(test_questions, dtype='list')
@@ -311,11 +323,14 @@ if __name__ == '__main__':
                   )
         # print(clustered_sentences[id_nearest_cluster[0]][0])
 
+        test_plot[0] = -test_plot[0] / norm
         res += [[test_action, test_plot[0], test_plot[1]]]
         y_pos = test_plot[1]#*(np.abs(test_plot[1]+1))
         plt.scatter([test_plot[0]], [y_pos], c=[colors_a[0] if test_plot[0] <= 0 else colors_a[1]], marker="x") # test_plot[1] just for viz
 
         texts.append(ax.text(test_plot[0], test_plot[1], test_action, fontSize="26"))
+        csv_file.write(str(test_plot[0]) + "," + test_action + '\n')
+    csv_file.close()
 
     res.sort(key=lambda x: x[1])
 
