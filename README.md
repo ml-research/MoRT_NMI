@@ -1,4 +1,4 @@
-# MoRT - Moral Representations from Transformers
+# Pre-Trained Language Models Mirror Human-like Moral Norms
 Code repository for the "Pre-Trained Language Models Mirror Human-like Moral Norms" publication.
 
 ## 1. Structure
