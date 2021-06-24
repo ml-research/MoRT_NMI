@@ -1,5 +1,5 @@
 # MoRT - Moral Representations from Transformers
-Code repository for the ... publication.
+Code repository for the "Pre-Trained Language Models Mirror Human-like Moral Norms" publication.
 
 ## 1. Structure
 The code is structured in:
