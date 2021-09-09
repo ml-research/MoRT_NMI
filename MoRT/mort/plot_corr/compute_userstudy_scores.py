@@ -1,8 +1,8 @@
 import csv
 import os
 
-fname = "./data/user_study/userStudy_yes_no.csv"
-fname_out = "./data_/correlation/userStudy_scores.csv"
+fname = "./data/user_study/userStudy_yes_no_regional.csv"
+fname_out = "./data_/correlation/userStudy_scores_regional.csv"
 sentences_ = list()
 
 actions = list()

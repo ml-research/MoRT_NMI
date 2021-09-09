@@ -1,5 +1,6 @@
 # Pre-Trained Language Models Mirror Human-like Moral Norms
-Code repository for the "Pre-Trained Language Models Mirror Human-like Moral Norms" publication.
+Code repository and Supplemental Material for the "Pre-trained Language Models Mimic Human Sense of Right and Wrong" 
+publication.
 
 ## 1. Structure
 The code is structured in:
@@ -7,6 +8,13 @@ The code is structured in:
 * /MoRT: the moral choice machine and moral compass source code
 * /LAMA: forked repo of https://github.com/facebookresearch/LAMA
 * /realtoxicityprompts forked repo of https://github.com/allenai/real-toxicity-prompts
+
+
+The Supplemental Material is divided in:
+
+* /MoralScore: Tables with results to reproduce the figures
+* /TextGeneration: Results of text generation. Read the contrained README.md for download links.
+* /UserStudy: material of conducted user studies
 
 ## 2. Dependencies
     see MoRT/requirements.txt
@@ -53,7 +61,14 @@ GloVe and BERT:
     python mort/plot_corr/computeGloveScorePosNeg.py
     python mort/plot_corr/computeBERTAndGloVeScoreOfUserStudyActions.py
 
+### Correlation between human and PLM's moral scores
 
+    python mort/plot_corr/plt_UserStudyCorr.py
+
+By default the correlation is calculated with the regional study. 
+To apply the global AMT study replace 'regional' with 'globalAMT' in line 181.
+
+    
 
 ### Realtoxicityprompts text generation (optional)
 Run scripts contained in realtoxicityprompts/scripts_mort 

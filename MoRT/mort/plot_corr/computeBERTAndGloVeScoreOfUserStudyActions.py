@@ -3,12 +3,12 @@ from tqdm import tqdm
 import csv
 import os
 
-with open("./data/user_study/userStudy_yes_no.csv", "r") as f:
+with open("./data/user_study/userStudy_yes_no_regional.csv", "r") as f:
     actions_keys_ = [row.split(',')[0] for row in f]
     actions_keys_ = actions_keys_[1:]
 
 questions = dict()
-with open("./data/user_study/userStudy_action_template.csv", "r") as f:
+with open("./data/user_study/userStudy_action_template_regional.csv", "r") as f:
     for i, row in enumerate(f):
         if i != 0:
             q, a = row.split(',')[1], row.split(',')[0]

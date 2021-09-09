@@ -42,7 +42,7 @@ if __name__ == '__main__':
     elif args.data == 'neg50':
         data = list([d[0] for d in donts_50])
     elif args.data == 'userstudy':
-        with open("./data/user_study/userStudy_yes_no.csv", "r") as f:
+        with open("./data/user_study/userStudy_yes_no_regional.csv", "r") as f:
             actions_keys_ = [row.split(',')[0] for row in f]
             actions_keys_ = actions_keys_[1:]
             data = actions_keys_

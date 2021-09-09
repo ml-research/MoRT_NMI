@@ -31,7 +31,7 @@ def find_action_template(subfile):
 
     print(results)
 
-    with open('./data/Behavioral/userStudy_action_template.csv', 'w', newline='') as file:
+    with open('./data/Behavioral/userStudy_action_template_regional.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["action", "question"])
         for key in results.keys():

@@ -3,7 +3,7 @@
 /data/correlation/userstudy/BERT_cossim_bias.csv
 /data/correlation/userstudy/BERT_subspace_qa_bias.csv
 /data/correlation/userstudy/BERT_subspace_raw_bias.csv
-/data/correlation/userstudy/userStudy_scores.csv
+/data/correlation/userstudy/userStudy_scores_regional.csv
 """
 
 import matplotlib.pyplot as plt
@@ -160,7 +160,7 @@ def _corr(dos, donts, model_name, text_pos):
     y = [p[1] for p in y] # mcm does
     b = [p[1] for p in b] # mcm donts
 
-    own_plot(x, y, a, b, suffix="userstudy_vs_{}".format(model_name), text_pos=text_pos)
+    own_plot(x, y, a, b, suffix="{}userstudy_vs_{}".format(user_study, model_name), text_pos=text_pos)
     #weat_vs_BERTprojqt
     #weat_vs_BERTprojraw
 
@@ -178,7 +178,10 @@ def _corr(dos, donts, model_name, text_pos):
 
 
 if __name__ == '__main__':
-    with open("data/correlation/userstudy/userStudy_scores.csv", 'r') as f:
+    user_study = 'regional'
+    #user_study = 'globalAMT'
+
+    with open(f"data/correlation/userstudy/userStudy_scores_{user_study}.csv", 'r') as f:
         reader = csv.reader(f, delimiter=',')
         data = list(reader)
     data = [[action, (float(user_score) - 0.5) / 0.5] for (action, user_score) in data]
@@ -205,8 +208,12 @@ if __name__ == '__main__':
     # BERT proj
     print("BERT proj")
     text_pos = (-0.25, 1.2,)
-    _corr(dos, donts, 'BERT_subspace_qa', text_pos)
-    # BERT proj raw
+    _corr(dos, donts, f'BERT_subspace_qa_{user_study}', text_pos)
+    # BERT proj raw (same question style as in study)
     print("BERT proj raw")
     text_pos = (-0.25, 1.2,)
-    _corr(dos, donts, 'BERT_subspace_raw', text_pos)
+    _corr(dos, donts, f'BERT_subspace_raw_{user_study}', text_pos)
+    # BERT proj without embedding the action into questions
+    print("BERT proj without q")
+    text_pos = (-0.25, 1.2,)
+    _corr(dos, donts, f'BERT_subspace_without_q_{user_study}', text_pos)
